@@ -857,6 +857,8 @@ func TestVK_GroupsGetSettings(t *testing.T) {
 	needUserToken(t)
 	needGroupToken(t)
 
+	vkUser.EnableMessagePack(true)
+
 	res, err := vkUser.GroupsGetSettings(api.Params{
 		"group_id": vkGroupID,
 	})
